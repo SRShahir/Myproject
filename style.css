@@ -1,0 +1,108 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+#logo {
+    padding: 30px;
+}
+
+#mhlogo {
+    margin-left: 700px;
+}
+
+#leng>input {
+    box-sizing: inherit;
+    padding: 10px;
+    margin-left: 20px;
+    font-size: 30px;
+    border-radius: 10px;
+    justify-content: left;
+    align-items: center;
+}
+
+#search {
+    padding: 10px;
+    height: 60px;
+    font-size: 30px;
+    outline: none;
+    font-weight: bold;
+    border-radius: 20px;
+    right: 20px;
+}
+
+#sidenav {
+    background-color: rgb(15, 16, 16);
+    font-size: 20px;
+    width: 270px;
+    position: fixed;
+    top: 40px;
+    right: 150px;
+    z-index: 1;
+    transition: .5s;
+}
+
+nav ul li {
+    color: aliceblue;
+    margin: 10px 20px;
+
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(247, 244, 244);
+}
+
+#menuBtn {
+    width: 50px;
+    position: fixed;
+    right: 150px;
+    top: 40px;
+    z-index: 2;
+    cursor: pointer;
+}
+
+#govt-container {
+    padding: 30px;
+    display: flex;
+    justify-content: left;
+    align-items: top;
+    gap: 10px;
+}
+
+.h1 {
+    font-size: 48px;
+}
+
+#arrow-down {
+    display: inline;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid rgb(0, 0, 0);
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+}
+
+
+
+
+#midenav {
+    background-color: rgb(15, 16, 16);
+    font-size: 20px;
+    bottom: 10px;
+    left: 400px;
+    transition: .5s;
+}
+
+#update {
+    padding: 10px;
+    height: 60px;
+    font-size: 30px;
+    outline: none;
+    font-weight: bold;
+    border-radius: 20px;
+    right: 20px;
+}

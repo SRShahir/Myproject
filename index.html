@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Project</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+
+        <div class="container">
+            <div class="header">
+                <div class="logo">
+                    <br>
+                    <hr>
+                    <img src="images/logo.jpg" id="logo" width="100px">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0xml1O7ytd4OkkkecW2Rgqxi5ODIdjWOtRg&usqp=CAU"
+                        id="mhlogo" width="200px">
+                </div>
+                <br><br>
+                <div id="leng">
+                    <input type="text" placeholder="name">
+                    <button type="button" id="search">Search</button>
+                </div>
+                <img src="images/hamburgur_black.svg" id="menuBtn">
+                <nav id="sidenav">
+                    <ul>
+                        <li><a href="#">TOPICS</a></li>
+                        <li><a href="#">SEVICES</a></li>
+                        <li><a href="#">MY GOVERNMENT</a></li>
+
+                    </ul>
+                </nav>
+            </div>
+            <br><br><br>
+            <hr>
+            <div id="govt-container">
+                <span class="h1">My Government</span>
+                <span id="arrow-down"></span>
+
+                <br>
+                <nav id="midenav">
+                    <ul>
+                        <li><a href="#">Constitution of India </a></li>
+                        <li><a href="#">Act</a></li>
+                        <li><a href="#">Scheme</a></li>
+                        <li><a href="#">Document</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="new">
+
+            <span id="gov-new">New</span>
+            <button type="button" id="update">Update</button>
+            <h2>Online Forms</h2>
+
+        </div>
+        <script>
+            var menubtn = document.getElementById("menuBtn");
+            var sidenav = document.getElementById("sidenav");
+            sidenav.style.display = "none";
+            menubtn.onclick = function () {
+                if (sidenav.style.display == "none") {
+                    sidenav.style.display = "block"
+                    menubtn.src = "images/hamburgur_white.svg";
+                }
+                else {
+                    sidenav.style.display = "none";
+                    menubtn.src = "images/hamburgur_black.svg";
+
+                }
+            }
+        </script>
+        <script>
+            var gcontainer = document.getElementById("midenav");
+            var midenav = document.getElementById("midenav");
+            var down = document.getElementById("arrow-down");
+            var up = document.getElementById("arrow-up");
+            gcontainer.style.display = "none";
+            down.onclick = function () {
+                if (midenav.style.display == "none") {
+                    midenav.style.display = "block";
+                }
+                else {
+                    midenav.style.display = "none";
+
+                }
+            }
+
+        </script>
+        <script src="script.js"></script>
+        <script type="module">
+            // Import the functions you need from the SDKs you need
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-app.js";
+            import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-analytics.js";
+            // TODO: Add SDKs for Firebase products that you want to use
+            // https://firebase.google.com/docs/web/setup#available-libraries
+
+            // Your web app's Firebase configuration
+            // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+            const firebaseConfig = {
+                apiKey: "AIzaSyDuP0XZwnoPur4r3Lxq5P9EOJ8Ohgh77Ig",
+                authDomain: "government-scheem.firebaseapp.com",
+                projectId: "government-scheem",
+                storageBucket: "government-scheem.appspot.com",
+                messagingSenderId: "362392293654",
+                appId: "1:362392293654:web:f1561320cfec9620510037",
+                measurementId: "G-L4CM2R1J5Z"
+            };
+
+            // Initialize Firebase
+            const app = initializeApp(firebaseConfig);
+            const analytics = getAnalytics(app);
+        </script>
+    </body>
+
+</html>
