@@ -12,23 +12,24 @@
 }
 
 #leng>input {
-    box-sizing: inherit;
     padding: 10px;
     margin-left: 20px;
     font-size: 30px;
     border-radius: 10px;
     justify-content: left;
     align-items: center;
+    background-color: rgb(232, 240, 238);
 }
 
 #search {
     padding: 10px;
-    height: 60px;
     font-size: 30px;
     outline: none;
     font-weight: bold;
     border-radius: 20px;
     right: 20px;
+    background-color: rgb(114, 191, 224);
+    cursor: pointer;
 }
 
 #sidenav {
@@ -99,10 +100,46 @@ nav ul li a {
 
 #update {
     padding: 10px;
-    height: 60px;
     font-size: 30px;
-    outline: none;
     font-weight: bold;
     border-radius: 20px;
-    right: 20px;
+    right: -1700px;
+    position: relative;
+    background-color: rgb(124, 202, 222);
+    color: rgb(25, 24, 24);
+    cursor: pointer;
+
+    }
+    
+    .title {
+        padding: 10px;
+        font-size: 25px;
+        color: rgb(33, 145, 151);
+    
+    }
+    
+    .disc {
+        padding: 10px;
+        font-size: 20px;
+    }
+    
+    .date {
+        display: flex;
+        justify-content: right;
+        font-size: 20px;
+        margin-right: 50px;
+        position: relative;
+        z-index: 5;
+    }
+    
+    #gov-new {
+        padding: 20px;
+        background-color: rgb(249, 250, 251);
+        font-size: 60px;
+        font-weight: bold,;
+        color: rgb(15, 50, 77);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
 }

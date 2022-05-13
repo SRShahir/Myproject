@@ -48,6 +48,8 @@
                         <li><a href="#">Act</a></li>
                         <li><a href="#">Scheme</a></li>
                         <li><a href="#">Document</a></li>
+                        <li><a href="#">Online Forms</a></li>
+
                     </ul>
                 </nav>
             </div>
@@ -56,7 +58,6 @@
 
             <span id="gov-new">New</span>
             <button type="button" id="update">Update</button>
-            <h2>Online Forms</h2>
 
         </div>
         <script>
@@ -115,6 +116,64 @@
             // Initialize Firebase
             const app = initializeApp(firebaseConfig);
             const analytics = getAnalytics(app);
+
+    let dbdata = [
+        {
+            "title": "Get E-Book of Ministry of Panchayati Raj",
+            "Description": "Users can get the E-Book released by the Ministry of Panchayati Raj. You can find information on Panchayats, good governance, structure of Panchayats, district planning committees, etc. Detailed information on key issues affecting Panchayats are also given in this E-Book.",
+            "Date": "2020-05-11"
+        },
+        {
+            "title": "Get EBook of Ministry of Panchayati Raj",
+            "Description": "Users can get the E-Book released by the Ministry of Panchayati Raj. You can find information on Panchayats, good governance, structure of Panchayats, district planning committees, etc. Detailed information on key issues affecting Panchayats are also given in this E-Book.",
+            "Date": "2020-05-11"
+        }
+    ];
+
+
+    // document.write(dbdata);
+    // document.body.innerHTML = dbdata;
+
+    let vDom = document.createElement('div');
+    let x = "";
+
+    dbdata.forEach(scheme => {
+        x = x + schemeTemplate(scheme);
+
+    });
+
+    vDom.innerHTML = x;
+
+
+    document.body.appendChild(vDom)
+    vDom.style.border = "1px solid black";
+
+    vDom.style.padding = "20px";
+
+    vDom.style.fontsize = "40px";
+
+
+    function schemeTemplate(params) {
+
+        // console.log(params.title);
+
+        return `<div>
+           <p class="title"> <b>${params.title} 
+            </b></p><br><hr>
+              
+                <p class="disc"> ${params.Description} </p>
+                   
+                    <p class="date"><b> ${params.Date}</b></p><br>
+                    
+                    </div>`;
+
+        vDom.innerHTML = x;
+    }
+
+
+
+
+
         </script>
     </body>
 
